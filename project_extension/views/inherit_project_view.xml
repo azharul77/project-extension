@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <!-- inherit project form view -->
+        <record id="view_edit_project_form_inherit_team" model="ir.ui.view">
+            <field name="name">project.project.form.inherit.team</field>
+            <field name="model">project.project</field>
+            <field name="inherit_id" ref="project.edit_project"/>
+            <field name="arch" type="xml">
+                <!-- Add a new field for team -->
+                <xpath expr="//field[@name='user_id']" position="after">
+                        <field name="team_id"/>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>
