@@ -4,7 +4,15 @@
 
         <!-- Sub Menu -->
         <menuitem action="project_extension.action_project_team" id="menu_projects_teams" name="Teams" parent="project.menu_project_config" sequence="1"/>
-
-
+        <!-- Dash board action  -->
+        <record id="project_dashboard_action" model="ir.actions.client">
+            <field name="name">Dashboard</field>
+            <field name="tag">project_extension</field>
+        </record>
+        <menuitem name="Dashboard"
+            action="project_dashboard_action"
+            id="custom_project_management_dashboard"
+            parent="project.menu_main_pm"
+            sequence="-1"/>
     </data>
 </odoo>

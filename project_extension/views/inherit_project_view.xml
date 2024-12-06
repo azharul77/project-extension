@@ -13,5 +13,21 @@
                 </xpath>
             </field>
         </record>
+
+        <!-- Inherit the project kanban view -->
+        <record id="view_project_kanban_inherit_team" model="ir.ui.view">
+            <field name="name">project.project.kanban.inherit.team</field>
+            <field name="model">project.project</field>
+            <field name="inherit_id" ref="project.view_project_kanban" />
+            <field name="arch" type="xml">
+                <!-- Add the team_id field in the kanban-box template -->
+                <xpath expr="//t[@t-name='kanban-box']/div/div[1]" position="inside">
+                    <div class="o_team_info text-danger">
+                        <span class="fa fa-arrows-alt me-2" aria-label="Team" title="Team: "></span>
+                        <field name="team_id"/>
+                    </div>
+                </xpath>
+            </field>
+        </record>
     </data>
 </odoo>

@@ -1,0 +1,90 @@
+<template id="template" xml:space="preserve">
+    <t t-name="project_task_dashboard">
+        <div class="oh_dashboard bg-success">
+            <div class="container-fluid o_pos_dashboard">
+                
+            </div>
+        </div>
+    </t>
+    <t t-name="project_template_dashboard">
+        <div class="oh_dashboard">
+            <div class="container-fluid">
+                <div class="container">
+                    <div class="text-center mb-4 mt-5">
+                        <img src="/project_extension/static/src/img/startiv.png" alt="Dashboard Logo" class="img-fluid" style="max-width: 200px;"/>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6 mb-4">
+                            <div class="card shadow-lg rounded text-white" style="background-color:#3B1C32">
+                                <div class="d-flex align-items-center justify-content-between p-3">
+                                    <div class="stat-icon">
+                                        <i class="fa fa-calendar fa-5x"/>
+                                    </div>
+                                    <div>
+                                        <h3 class="text-center fw-bold text-white">This Week</h3>
+                                        <h2 class="text-white text-end" id="this_week_task" t-esc="this_week_task"/>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-4">
+                            <div class="card shadow-lg rounded text-white" style="background-color:#1679AB">
+                                <div class="d-flex align-items-center justify-content-between p-3">
+                                    <div class="stat-icon">
+                                        <i class="fa fa-calendar-check-o fa-5x"/>
+                                    </div>
+                                    <div>
+                                        <h3 class="text-center fw-bold text-white">This Month</h3>
+                                        <h2 class="text-white text-end" id="this_month_task" t-esc="this_month_task"/>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-4">
+                            <div class="card shadow-lg rounded text-white" style="background-color:#133E87">
+                                <div class="d-flex align-items-center justify-content-between p-3">
+                                    <div class="stat-icon">
+                                        <i class="fa fa-calendar-minus-o fa-5x"/>
+                                    </div>
+                                    <div>
+                                        <h3 class="text-center fw-bold text-white">Last Week</h3>
+                                        <h2 class="text-white text-end" id="last_week_task" t-esc="last_week_task"/>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-4">
+                            <div class="card shadow-lg rounded text-white" style="background-color:#00224D">
+                                <div class="d-flex align-items-center justify-content-between p-3">
+                                    <div class="stat-icon">
+                                        <i class="fa fa-calendar-times-o fa-5x"/>
+                                    </div>
+                                    <div>
+                                        <h3 class="text-center fw-bold text-white">Last Month</h3>
+                                        <h2 class="text-white text-end" id="last_month_task" t-esc="last_month_task"/>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-12 mb-4">
+                            <div class="card shadow-lg rounded text-white" id="view_all_task" style="background-color:#222831">
+                                <div class="d-flex align-items-center justify-content-between p-3">
+                                    <div class="stat-icon">
+                                        <i class="fa fa-tasks fa-5x"/>
+                                    </div>
+                                    <div>
+                                        <h3 class="text-center fw-bold text-white">Total tasks</h3>
+                                        <h2 class="text-white text-end" id="all_task" t-esc="all_task"/>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="text-center">
+                        <h1 class="fw-bolder display-2" style="color: ##19312D">Task Dashboard</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </t>
+</template>

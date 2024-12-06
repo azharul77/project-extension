@@ -1,12 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
     <data>
-        <!-- Projects should only be visible to the team members -->
+        <!-- Rule to allow project creation for everyone (no restrictions on creation) -->
+        <record id="project_create_permission_rule" model="ir.rule">
+            <field name="name">Allow Project Creation</field>
+            <field name="model_id" ref="project.model_project_project"/>
+            <field name="domain_force">[]</field> <!-- No restrictions for creation -->
+            <field name="perm_create" eval="True"/>
+            <field name="perm_read" eval="False"/>
+            <field name="perm_write" eval="False"/>
+            <field name="perm_unlink" eval="False"/>
+        </record>
+
+        <!-- Rule to restrict visibility and editing to team members only, but allow the creator to access the project -->
         <record id="project_team_user_rule" model="ir.rule">
             <field name="name">Project Team User Rule</field>
             <field name="model_id" ref="project.model_project_project"/>
-            <field name="domain_force">[('team_id.members', 'in', user.id)]</field>
-            <field name="groups" eval="False"/>
+            <!-- Ensure the creator and the team members can see the project -->
+            <field name="domain_force">['|', ('team_id.members', 'in', [user.id]),('user_id', '=', user.id)]</field>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="True"/>
+            <field name="perm_unlink" eval="True"/>
+            <field name="perm_create" eval="False"/>
         </record>
     </data>
 </odoo>
