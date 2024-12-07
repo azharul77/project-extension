@@ -17,7 +17,7 @@ App Information.
         'base',
         'web',
         'mail',
-        'project'
+        'project',
     ],
     'data': [
         ## Data
@@ -62,6 +62,9 @@ App Information.
     #     ## Demo Data
     #     'demo/my_model_name_demo.xml',
     # ],
+    'test': [
+        'tests/test_project_dashboard.py',
+    ],
     'external_dependencies': {
         'python': [
             'werkzeug',

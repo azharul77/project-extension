@@ -15,7 +15,7 @@
                     </div>
                     <div class="row">
                         <div class="col-md-6 mb-4">
-                            <div class="card shadow-lg rounded text-white" style="background-color:#3B1C32">
+                            <div class="card shadow-lg rounded text-white" id="view_all_this_week_task" style="background-color:#3B1C32">
                                 <div class="d-flex align-items-center justify-content-between p-3">
                                     <div class="stat-icon">
                                         <i class="fa fa-calendar fa-5x"/>
@@ -28,7 +28,7 @@
                             </div>
                         </div>
                         <div class="col-md-6 mb-4">
-                            <div class="card shadow-lg rounded text-white" style="background-color:#1679AB">
+                            <div class="card shadow-lg rounded text-white" id="view_all_this_month_task" style="background-color:#1679AB">
                                 <div class="d-flex align-items-center justify-content-between p-3">
                                     <div class="stat-icon">
                                         <i class="fa fa-calendar-check-o fa-5x"/>
@@ -41,7 +41,7 @@
                             </div>
                         </div>
                         <div class="col-md-6 mb-4">
-                            <div class="card shadow-lg rounded text-white" style="background-color:#133E87">
+                            <div class="card shadow-lg rounded text-white" id="view_all_last_week_task" style="background-color:#133E87">
                                 <div class="d-flex align-items-center justify-content-between p-3">
                                     <div class="stat-icon">
                                         <i class="fa fa-calendar-minus-o fa-5x"/>
@@ -54,7 +54,7 @@
                             </div>
                         </div>
                         <div class="col-md-6 mb-4">
-                            <div class="card shadow-lg rounded text-white" style="background-color:#00224D">
+                            <div class="card shadow-lg rounded text-white" id="view_all_last_month_task" style="background-color:#00224D">
                                 <div class="d-flex align-items-center justify-content-between p-3">
                                     <div class="stat-icon">
                                         <i class="fa fa-calendar-times-o fa-5x"/>
