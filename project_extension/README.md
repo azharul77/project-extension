@@ -17,6 +17,7 @@ Installation
 Configurations
 ===============
 Create team => Project>Confifuration>Teams
+Assign team to a project => project>projects>Settings>Project Team
 
 Message to code reviewer
 =====================================
